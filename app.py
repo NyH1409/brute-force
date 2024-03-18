@@ -16,7 +16,7 @@ def show_index():
 def show_image():
     filename = request.args.get('filename')
     
-    with open(f"static/{filename}", "rb") as f:
+    with open(filename, "rb") as f:
         content = f.read()
 
     return Response(content, mimetype='image/png')
